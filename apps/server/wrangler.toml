@@ -1,0 +1,11 @@
+name = "server"
+main = "src/index.ts"
+compatibility_date = "2023-04-06"
+
+d1_databases = [
+    { binding = "d1", database_id = "d1", database_name = "d1", preview_database_id = "local-d1" }
+]
+
+kv_namespaces = [
+    { binding = "kv", id = "a", preview_id = "asda" }
+]

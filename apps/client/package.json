@@ -1,0 +1,17 @@
+{
+  "name": "client",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@trpc/client": "^10.18.0",
+    "@trpc/server": "^10.18.0",
+    "astro": "^2.7.1"
+  }
+}

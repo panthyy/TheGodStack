@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx wrangler dev --local --persist",
+    "db:generate": "drizzle-kit generate:sqlite --schema=schema/index.ts",
+    "db:local:push": "drizzle-kit push:sqlite",
+    "kysely:generate": "kysely-codegen --dialect=sqlite --url=.wrangler/state/d1/d1.sqlite3",
+    "generate": "pnpm db:generate && pnpm kysely:generate",
+    "local:push": "pnpm  db:local:push",
+    "migrate": "bun migrate.ts",
+    "dizzle:up": "drizzle-kit up --schema=schema/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "better-sqlite3": "^8.4.0",
+    "drizzle-kit": "^0.19.2",
+    "drizzle-orm": "^0.27.0",
+    "kysely-codegen": "^0.10.1"
+  },
+  "dependencies": {
+    "itty-router": "^4.0.13",
+    "kysely": "^0.25.0",
+    "kysely-d1": "^0.3.0"
+  }
+}

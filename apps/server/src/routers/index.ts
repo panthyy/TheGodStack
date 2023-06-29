@@ -5,6 +5,9 @@ export const exampleRouter = router({
     return 'Hello World!';
   }),
   getUsers: publicProcedure.query(async ({ ctx: { db } }) => {
-    return await db.selectFrom('users').select(['id', 'name', 'email']);
+    return await db
+      .selectFrom('users')
+      .select(['id', 'name', 'email'])
+      .execute();
   }),
 });

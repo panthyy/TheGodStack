@@ -7,6 +7,7 @@ import { Router, createCors, error, json } from 'itty-router';
 export type ENV = {
   NODE_ENV: 'development' | 'production';
   d1: D1Database;
+  kv: KVNamespace;
 };
 
 const { preflight, corsify } = createCors({

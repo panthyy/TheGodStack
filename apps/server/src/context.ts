@@ -21,6 +21,7 @@ export const createContext =
 
     return {
       req,
+      kv: env.kv,
       user,
       env,
       db,
